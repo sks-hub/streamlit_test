@@ -7,7 +7,10 @@ import streamlit as st
 
 
 # load_dotenv()
-API_KEY = str(os.environ.get("API_KEY"))
+#API_KEY = str(os.environ.get("API_KEY"))
+API_KEY = str(os.getenv("API_KEY"))
+
+print("Value of 'API_KEY' environment variable :", API_KEY) 
 
 # The st.cache decorator indicates that data will be downloaded only once and cached for future use.
 @st.cache
