@@ -1,15 +1,15 @@
 import os
 
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import pandas as pd
 import plotly.express as px
 import streamlit as st
 
 
-load_dotenv()
-API_KEY = os.environ.get("API_KEY")
+# load_dotenv()
+API_KEY = str(os.environ.get("API_KEY"))
 
-
+# The st.cache decorator indicates that data will be downloaded only once and cached for future use.
 @st.cache
 def get_data(ticker):
     """Loads and caches data from the AlphaVantage API."""
@@ -24,8 +24,7 @@ def get_data(ticker):
 
 
 def app():
-    """Functional approach is helpful once you extend to multi-page apps."""
-    st.title("TDI Milestone Example")
+    st.title("TDI Streamlit Milestone Project")
     st.markdown("""An interactive chart of stock closing prices using Streamlit
 and Plot.ly. """)
 
