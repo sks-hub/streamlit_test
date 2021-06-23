@@ -87,7 +87,7 @@ def main():
         st.stop()
 
     # Plot the figure
-    fig = px.line(plot_data, x="Timestamp", y="Close", title=f'{ticker}: {month} {year}')
+    fig = px.line(plot_data, x="timestamp", y="close", title=f'{ticker}: {month} {year}')
     st.plotly_chart(fig)
 
 if __name__ == "__main__":
