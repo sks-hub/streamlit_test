@@ -38,7 +38,7 @@ def load_data(ticker):
         "symbol": ticker,
         "outputsize" : "full",
         "datatype": "csv", 
-        "apikey": API_KEY 
+        "apikey": '15IVINHOXLEBI77R' 
         } 
     
     response = requests.get(API_URL, params=params)
