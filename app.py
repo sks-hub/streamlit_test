@@ -1,10 +1,10 @@
 import os
 import sys
-# from dotenv import load_dotenv
 import pandas as pd
 import plotly.express as px
 import streamlit as st
 import requests
+# from dotenv import load_dotenv
 
 # load_dotenv()
 API_KEY = str(os.environ.get("API_KEY"))
@@ -38,7 +38,7 @@ def load_data(ticker):
         "symbol": ticker,
         "outputsize" : "full",
         "datatype": "csv", 
-        "apikey": '15IVINHOXLEBI77R' 
+        "apikey": API_KEY
         } 
     
     response = requests.get(API_URL, params=params)
